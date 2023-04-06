@@ -32,6 +32,7 @@ export const MainCarousel = styled.div`
     border: 1px solid ${({theme}) => theme.colors.gray150};
     border-radius: 0.5rem;
     margin-right: 2rem;
+  
   }
 
   
@@ -52,12 +53,14 @@ export const MainCarousel = styled.div`
   .flex-2{
     display: flex;
     flex-direction: column;
+ 
   }
 
   .flex-2 .flex-1 img{
     height: 0.625rem;
     width: 0.625rem;
     margin-left: 0.2rem;
+   
   }
 
   .flex-1  h1{
@@ -67,6 +70,12 @@ export const MainCarousel = styled.div`
     color:  ${({theme}) => theme.colors.black};
   }
 
+  .current-price{
+    padding-top: 0.7rem;
+    font-size: 1rem;
+    color:  ${({theme}) => theme.colors.gray200};
+  }
+
   .flex-2 h2{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1.75rem;
@@ -74,9 +83,10 @@ export const MainCarousel = styled.div`
     color:  ${({theme}) => theme.colors.black};
   }
 
-  .coinValue{ 
-    padding-top: 8px;
-    color:  ${({theme}) => theme.colors.gray200};
+  h5{ 
+    padding-top: 1rem;
+    color:  ${({theme}) => theme.colors.black};
+    
   }
 
   .check-high{
