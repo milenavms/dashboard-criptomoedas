@@ -19,7 +19,6 @@ import logoMin from '../assets/logo-site-min.png';
 import logoMax from '../assets/logo-site-max.png';
 
 
-
 const pages = ['Cryptoncurrencies','Exchanges','NFT','CrypTowm','Portfolio','Watclist','products'];
 const pagesMin = ['Cryptoncurrencies','Exchanges','NFT','CrypTowm','Portfolio','Watclist','products','Login', 'Sigin'];
 
@@ -81,7 +80,6 @@ export default function ResponsiveAppBar() {
   }));
 
 
-
   const IconNotify = styled('img')(({ theme }) => ({
     height: "12px", 
     width: "12px",
@@ -89,11 +87,8 @@ export default function ResponsiveAppBar() {
    
   }));
 
-  
-
 
   const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
-
     fontFamily: 'Inter', 
     fontWeight: 600,
     fontStyle:'normal', 
@@ -111,36 +106,21 @@ export default function ResponsiveAppBar() {
     },
   }));
 
-  
-
- 
   return (
     <AppBar position="static" sx={{background: 'white'}} elevation={0}>
       <Container maxWidth="xl"  sx={{ height: 75}}>
         <Toolbar disableGutters >
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
+          <Typography variant="h6" noWrap component="a" href="/"
             sx={{mr: 2,display: { xs: 'none', md: 'flex' }, fontFamily: 'Inter',fontWeight: 600,
               letterSpacing: '.1rem',color: 'inherit', textDecoration: 'none',fontSize: 20
             }}
           >
             
-           <Box 
-            component="img"  
-            src={logoMax} 
-            alt='logo' 
-            sx={{ height: "58px", width: "240 px" }} 
-            />
+           <Box component="img"  src={logoMax} alt='logo' sx={{ height: "58px", width: "240 px" }} />
+
           </Typography>
 
-          <Box 
-          sx={{ 
-            flexGrow: 0, 
-            display: { xs: 'flex', md: 'none' } 
-          }}>
+          <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
             <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar"aria-haspopup="true"
               onClick={handleOpenNavMenu}
             >
@@ -148,8 +128,7 @@ export default function ResponsiveAppBar() {
               sx={{color: 'black'}} 
              />
             </IconButton >
-            <Menu
-              id="menu-appbar"
+            <Menu id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{vertical: 'bottom',horizontal: 'left',}}
               keepMounted
@@ -168,40 +147,20 @@ export default function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              height: 75,justifyContent: 'space-around',mr: 2,display: { xs: 'flex', md: 'none', flexGrow: 3},
+          <Typography variant="h5" noWrap component="a" href=""
+            sx={{height: 75,justifyContent: 'space-around',mr: 2,display: { xs: 'flex', md: 'none', flexGrow: 3},
               flexGrow: 1,fontFamily: 'monospace',fontWeight: 700,letterSpacing: '.3rem',color: 'inherit',textDecoration: 'none',
               alignItems: 'center',flexDirection: 'column' 
             }}
           >
-            <Box 
-              component="img" 
-              src={logoMin} 
-              alt='logo' 
-              sx={{ height: "auto", width: "auto"}} 
-            />
+            <Box component="img" src={logoMin} alt='logo' sx={{ height: "auto", width: "auto"}} />
           </Typography>
   
           <Box sx={{ flexGrow: 1, height: 75,display: { xs: 'none', md: 'flex'}}}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ 
-                  my: 3, 
-                  display: 'block',
-                  flexDirection:'column',
-                  textTransform: 'capitalize', 
-                  fontFamily: 'Inter', 
-                  fontWeight: '600',
-                  fontStyle:'normal', 
-                  fontSize:'16px', 
-                  color: 'black'
+              <Button key={page} onClick={handleCloseNavMenu}
+                sx={{ my: 3, display: 'block', flexDirection:'column',textTransform: 'capitalize', 
+                  fontFamily: 'Inter', fontWeight: '600',fontStyle:'normal', fontSize:'16px', color: 'black'
                 }}
               >
                 
@@ -220,22 +179,19 @@ export default function ResponsiveAppBar() {
             ))}
           </Box>
 
-          <Box component="img" 
-            src={iconDiamanteBlue} alt='logo' 
+          <Box component="img" src={iconDiamanteBlue} alt='logo' 
             sx={{ display: { xs: 'none', md: 'flex' }, height: "20px",width: "22.5px", padding: "0",marginRight: "4px"}} 
           />
 
           <Box sx={{flexGrow: 0,display: {xs: 'none',md: 'flex'},}}>
-            <ColorButton variant="contained"  sx={{backgroundColor: 'white', color: 'black', boxShadow: 'none',
-            "&.MuiButtonBase-root:hover": {bgcolor: "transparent"}
-            }}>
+            <ColorButton variant="contained"  
+            sx={{backgroundColor: 'white', color: 'black', boxShadow: 'none',"&.MuiButtonBase-root:hover": {bgcolor: "transparent"}}}>
               Sign in
-            </ColorButton>
+            </ColorButton>          
           </Box>
 
-          <Box 
-          sx={{flexGrow: 0,display: {xs: 'none',md: 'flex', marginRight: '0px'},}}>
-            <ColorButton variant="contained">
+          <Box sx={{flexGrow: 0,display: {xs: 'none',md: 'flex', marginRight: '0px'},}}>
+            <ColorButton variant="contained" >
               Sign up
             </ColorButton>
           </Box>
@@ -245,10 +201,7 @@ export default function ResponsiveAppBar() {
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Buscar"
-              inputProps={{ 'aria-label': 'search' }}
-            />
+            <StyledInputBase placeholder="Buscar" inputProps={{ 'aria-label': 'search' }}/>
           </Search>
           </Box>
          
