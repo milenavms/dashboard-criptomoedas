@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createContext } from "react";
-import { CriptoTopListInterface } from "../interface/CriptoTopListInterface";
 import { FavoriteContextProps } from "../interface/FavoriteContextProps";
+import { CriptoTopListInterface } from "../services/listTopCriptomoedasService";
 
 interface props {
     children: JSX.Element | JSX.Element[]

@@ -1,5 +1,5 @@
-import iconStarActive from '../assets/icons/star.svg';
-import iconStarInactive from '../assets/icons/star-inactive.svg';
+import iconStarActive from '../../assets/icons/star.svg';
+import iconStarInactive from '../../assets/icons/star-inactive.svg';
 
 type props ={
     value: boolean;

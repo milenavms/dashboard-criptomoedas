@@ -8,15 +8,15 @@ import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import { ButtonProps } from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
-import iconDiamanteBlue from '../assets/icons/icon-diamante.svg';
-import iconNotification from '../assets/icons/icon-notification.svg';
-import logoMin from '../assets/logo-site-min.png';
-import logoMax from '../assets/logo-site-max.png';
+import iconDiamanteBlue from '../../assets/icons/icon-diamante.svg';
+import iconNotification from '../../assets/icons/icon-notification.svg';
+import logoMin from '../../assets/logo-site-min.png';
+import logoMax from '../../assets/logo-site-max.png';
+import SearchButton from '../SearchButton/SearchButton';
+
 
 
 const pages = ['Cryptoncurrencies','Exchanges','NFT','CrypTowm','Portfolio','Watclist','products'];
@@ -34,51 +34,6 @@ export default function ResponsiveAppBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const Search = styled('div')(({ theme }) => ({
-    background:'#EFF2F5', 
-    height: "40px", 
-    width: "175px",
-    position: 'relative',
-    borderRadius: 8,
-    backgroundColor: '#EFF2F5',
-    '&:hover': {
-      backgroundColor: '#EFF2f9',
-    },
-    marginLeft: 0,
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
-      width: 'auto',
-    },
-  }));
-
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: '#A7B1C2',
-  }));
-
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: '#A7B1C2',
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 1, 1, 0),
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        width: '11ch',
-        '&:focus': {
-          width: '14ch',
-        },
-      },
-    },
-  }));
-
 
   const IconNotify = styled('img')(({ theme }) => ({
     height: "12px", 
@@ -197,12 +152,7 @@ export default function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0,  display: { xs: 'none', md: 'flex' }}}>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase placeholder="Buscar" inputProps={{ 'aria-label': 'search' }}/>
-          </Search>
+            <SearchButton/>
           </Box>
          
         </Toolbar>

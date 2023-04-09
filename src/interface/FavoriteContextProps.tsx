@@ -1,4 +1,5 @@
-import { CriptoTopListInterface } from "./CriptoTopListInterface";
+import { CriptoTopListInterface } from "../services/listTopCriptomoedasService";
+
 
 export interface FavoriteContextProps {
     favorites: CriptoTopListInterface[];

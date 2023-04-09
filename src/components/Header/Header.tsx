@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
 import { styled } from '@mui/material/styles';
-import CustomizedSwitches from './CustomizedSwitches';
+import SwitchesButton from '../SwitchesButton/SwitchesButton';
 
 const theme = createTheme();
 
@@ -30,8 +30,13 @@ const Item = styled(Paper)(({ theme }) => ({
     fontWeight: 600,
   }));
 
-  
-export default function Header() {
+  interface descriptiveText {
+    name: string
+  }
+
+export default function Header(props:descriptiveText) {
+  const { name } = props;
+
     return (
     <Box sx={{flexGrow: 1}}>
         <Grid container  spacing={0} 
@@ -40,7 +45,7 @@ export default function Header() {
             <Grid item xs={12} md={10} sx={{marginTop: '50px', marginBottom: '50px', paddingTop: '6px', paddingBottom: '6px'}}>
                 <Item>
                     <ThemeProvider theme={theme}>
-                        <Typography variant="h3">Preço das criptomoedas por valor de mercado</Typography>
+                        <Typography variant="h3">{name}</Typography>
                     </ThemeProvider>
                 </Item>
             </Grid>
@@ -49,7 +54,7 @@ export default function Header() {
                 <Grid item xs={12} md={2} 
                     sx={{ textAlign:'right', marginTop: '50px', marginBottom: '50px', paddingTop: '6px', paddingBottom: '6px'}}>
                 <Item>
-                    <CustomizedSwitches/>
+                    <SwitchesButton/>
                 </Item>
                 </Grid>
             </Box>

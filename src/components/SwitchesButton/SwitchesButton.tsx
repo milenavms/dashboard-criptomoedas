@@ -60,7 +60,7 @@ const IOSSwitch = styled((props: SwitchProps) => (
 }));
 
 
-export default function CustomizedSwitches() {
+export default function SwitchesButton() {
     const themes = useTheme();
 
   return (

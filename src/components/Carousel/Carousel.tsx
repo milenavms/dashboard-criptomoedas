@@ -3,12 +3,12 @@ import { useState, useEffect, useRef, useContext, MutableRefObject } from 'react
 import {motion} from 'framer-motion'
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { CriptoTopListInterface } from '../../interface/CriptoTopListInterface';
 import iconPolygonLow from '../../assets/icons/icon-polygon-low.svg';
 import iconPolygonHith from '../../assets/icons/icon-polygon-hith.svg';
 import { MainCarousel } from './styles';
-import Star from '../Star';
+import Star from '../Star/Star';
 import { FavoriteContext } from '../../context/FavoriteContext';
+import { CriptoTopListInterface } from '../../services/listTopCriptomoedasService';
 
 
 const theme = createTheme();
@@ -24,7 +24,6 @@ export default function Carousel() {
     const carousel = useRef<HTMLDivElement>(null);
     const mainCarousel = useRef<HTMLDivElement>(null);
     const [width, setWidth] = useState<number>(0);
-    const [HighLow, setHighLow] = useState<boolean>();
 
     useEffect(()=>{
         if(carousel?.current){
@@ -44,11 +43,9 @@ export default function Carousel() {
 
     const checkHighLowCoin = (topCriptomoeda:CriptoTopListInterface) => {
         return topCriptomoeda.price_change_percentage_24h > 0 
-        }   
+    }   
    
-     
     return (
-      
         <MainCarousel className="main-carousel " ref={mainCarousel}>
             <motion.div className="carousel"  ref={carousel} whileTap={{cursor: "grabbing"}}>
                 <motion.div>
@@ -77,15 +74,11 @@ export default function Carousel() {
                                 <p className={ checkHighLowCoin(favorite) ? 'check-high' : 'check-low' }>{favorite.price_change_percentage_24h.toFixed(2)}%</p>
                             </div>
                         </motion.div>
-                       
                     ))}
 
                 </motion.div>
             </motion.div>
         </MainCarousel>
- 
-
     );
-   
 };
 
