@@ -16,7 +16,7 @@ export interface SearchListInterface{
     data: Data;
 }
 
-export async function searchCriptoService(name: string | null): Promise<any>{
+export async function getSearchCriptomoedasService(name: string | null): Promise<any>{
     const endpoint = `https://api.coingecko.com/api/v3/search/?query=${name}`;
 
     const response = await axios.get<SearchListInterface>(endpoint);

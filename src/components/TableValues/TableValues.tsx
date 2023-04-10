@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { IconButton } from '@mui/material';
-import { CriptoTopListInterface, listTopCriptoService } from '../../services/listTopCriptomoedasService';
+import { CriptoTopListInterface, getListTopCriptomoedasService } from '../../services/getListTopCriptomoedasService';
 import styled from '@emotion/styled';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import iconPolygonLowMin from '../../assets/icons/icon-polygon-low-min.svg';
@@ -69,7 +69,7 @@ export default function TableValues() {
  
 
   useEffect(() => {
-    listTopCriptoService().then((response) => setTopCriptomoedas(response))
+    getListTopCriptomoedasService().then((response) => setTopCriptomoedas(response))
   }, []);
 
  

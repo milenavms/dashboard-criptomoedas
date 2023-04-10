@@ -8,7 +8,7 @@ import iconPolygonHith from '../../assets/icons/icon-polygon-hith.svg';
 import { MainCarousel } from './styles';
 import Star from '../Star/Star';
 import { FavoriteContext } from '../../context/FavoriteContext';
-import { CriptoTopListInterface } from '../../services/listTopCriptomoedasService';
+import { CriptoTopListInterface } from '../../services/getListTopCriptomoedasService';
 
 
 const theme = createTheme();
