@@ -8,11 +8,18 @@ export const Div = styled.div`
   height: 100vh;
   width: 100%;
 `
+
+interface descriptiveText {
+  name: string
+}
+
  
-export default function ErrorPage(){
-    const error = useRouteError();
+export default function ErrorPage(props:descriptiveText){
+  const { name } = props;
+  const error = useRouteError();
+
     return (
-        <Div> Página não Existe </Div>
+        <Div> {name} </Div>
     );
 };
 

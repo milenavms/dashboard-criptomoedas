@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
     {
       path: "/",
       element: <App/>,
-      errorElement: <ErrorPage/>,
+      errorElement: <ErrorPage name="Página não existe"/>,
       children:[
         {
           path: "/",

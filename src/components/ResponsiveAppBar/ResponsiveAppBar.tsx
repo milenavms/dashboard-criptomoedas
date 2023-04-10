@@ -16,6 +16,7 @@ import iconNotification from '../../assets/icons/icon-notification.svg';
 import logoMin from '../../assets/logo-site-min.png';
 import logoMax from '../../assets/logo-site-max.png';
 import SearchButton from '../SearchButton/SearchButton';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -70,8 +71,9 @@ export default function ResponsiveAppBar() {
               letterSpacing: '.1rem',color: 'inherit', textDecoration: 'none',fontSize: 20
             }}
           >
-            
-           <Box component="img"  src={logoMax} alt='logo' sx={{ height: "58px", width: "240 px" }} />
+          <NavLink to='/'>
+            <Box component="img"  src={logoMax} alt='logo' sx={{ height: "58px", width: "240 px" }} />
+          </NavLink>
 
           </Typography>
 

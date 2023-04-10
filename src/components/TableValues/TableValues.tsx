@@ -171,7 +171,7 @@ const  {format} = new Intl.NumberFormat('USD', {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[15, 30, 100]}
+        rowsPerPageOptions={[10, 20, 100]}
         component="div"
         count={topCriptomoedas.length}
         rowsPerPage={rowsPerPage}

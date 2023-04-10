@@ -1,6 +1,7 @@
 import { useRouteError } from "react-router-dom";
 import BreadcrumbsCustom from "../components/Breadcrumbs/BreadcrumbsCustom";
 import HeaderDetailsCoin from "../components/HeaderDetaislCoin/HeaderDetailsCoin";
+import CardsDetailsCoin from "../components/CardsDetailsCoin/CardsDetailsCoin";
 
 
 export default function DetailsCoinPage(){
@@ -9,6 +10,7 @@ export default function DetailsCoinPage(){
       <>
        <BreadcrumbsCustom/>
        <HeaderDetailsCoin/>
+       <CardsDetailsCoin/>
       </>
     );
 };

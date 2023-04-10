@@ -14,7 +14,7 @@ function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
 
 export default function BreadcrumbsCustom() {
   const theme = useTheme();
-  const {idmoeda} = useParams();
+  const {idmoeda} = useParams<string>();
 
   const breadcrumbs = [
     <Link underline="hover" key="1"  onClick={handleClick}  >

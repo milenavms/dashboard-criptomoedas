@@ -3,7 +3,6 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-
 import { styled } from '@mui/material/styles';
 import SwitchesButton from '../SwitchesButton/SwitchesButton';
 
@@ -30,9 +29,9 @@ const Item = styled(Paper)(({ theme }) => ({
     fontWeight: 600,
   }));
 
-  interface descriptiveText {
+interface descriptiveText {
     name: string
-  }
+}
 
 export default function Header(props:descriptiveText) {
   const { name } = props;
