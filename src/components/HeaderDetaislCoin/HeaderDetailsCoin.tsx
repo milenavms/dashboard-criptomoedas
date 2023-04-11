@@ -2,13 +2,13 @@ import React, { useEffect, useState} from 'react'
 import { useParams } from "react-router-dom"
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
-import IconFavoritar from '../../assets/icons/icon-favoritar.svg'
 import IconDefault from '../../assets/icons/icon-default.svg'
+import IconFavoritar from '../../assets/icons/icon-favoritar.svg'
 import {useTheme} from 'styled-components';
 import { DataListCriptoInterface, getDataListCriptomoedaService } from "../../services/getDataListCriptomoedaService"
 import { getDataListCriptomoedaPriceService } from "../../services/getDataListCriptomoedaPriceService"
 import styled from 'styled-components'
-import ErrorPage from "../../pages/ErrorPage";
+
 
 const TextBackground = styled.div`
     height: 31px;
