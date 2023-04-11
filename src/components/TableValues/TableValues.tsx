@@ -12,7 +12,6 @@ import styled from '@emotion/styled';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import iconPolygonLowMin from '../../assets/icons/icon-polygon-low-min.svg';
 import iconPolygonHithMin from '../../assets/icons/icon-polygon-hith-min.svg';
-import { NavLink } from 'react-router-dom';
 import { TableValuesCustom } from './styles';
 import Star from '../Star/Star';
 import { FavoriteContext } from '../../context/FavoriteContext';
