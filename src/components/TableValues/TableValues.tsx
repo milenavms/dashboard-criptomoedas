@@ -72,7 +72,23 @@ export default function TableValues() {
     getListTopCriptomoedasService().then((response) => setTopCriptomoedas(response))
   }, []);
 
- 
+  useEffect(() => {
+    const data:any= window.localStorage.getItem('FAVORITES_COINS')
+    const data2 = JSON.parse(data)
+    if( data2?.length > 0){
+      console.log('getItem se F5: ', data2)
+      setFavorites(data2) 
+    }
+  }, [])
+
+  useEffect(() => {
+    if(favorites.length >= 0){
+      window.localStorage.setItem('FAVORITES_COINS', JSON.stringify(favorites))
+      console.log('setItem se o favorites tiver alteração',favorites)
+    }
+  }, [favorites])
+
+
 
   const checkIsFavorite =  (topCriptomoeda:CriptoTopListInterface) => (
     favorites.some(

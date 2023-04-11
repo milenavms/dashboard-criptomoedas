@@ -31,7 +31,7 @@ export default function SearchButton(){
 
       renderOption={(props, coin) => (
         <Box component="li"  {...props}>
-          <NavLink to={`/moedas/${coin.name} `}>
+          <NavLink to={`/moedas/${coin.name} `} style={{textDecoration: 'none', color: 'black', fontSize: '14px'}} >
           {coin.name} 
           </NavLink>
         </Box>
