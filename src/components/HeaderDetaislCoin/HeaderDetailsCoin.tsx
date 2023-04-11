@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import IconDefault from '../../assets/icons/icon-default.svg'
-import IconFavoritar from '../../assets/icons/icon-favoritar.svg'
+import IconFavoritar from '../../assets/icons/favoritar.svg'
 import {useTheme} from 'styled-components';
 import { DataListCriptoInterface, getDataListCriptomoedaService } from "../../services/getDataListCriptomoedaService"
 import { getDataListCriptomoedaPriceService } from "../../services/getDataListCriptomoedaPriceService"
