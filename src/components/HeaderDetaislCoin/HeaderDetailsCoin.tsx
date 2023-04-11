@@ -112,20 +112,21 @@ export default function HeaderDetailsCoin(){
                         <p className="text-min"> {error ? "000" :"6.94"}%</p>
                      </TextBackground>
                 </Grid>
+
                 <Grid item xs={12} md={12} sx={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                      <Typography variant="subtitle1"  sx={{ color: theme.colors.gray200, marginBottom: '0px'}}>
-                        R$ 120,00
+                        R$ 0.00001392 BTC
                      </Typography> 
                      <Typography variant="subtitle1"  sx={{ color: theme.colors.green, marginBottom: '0px', marginRight: '12px'}}>
-                        6.94%
+                        1.94%
                      </Typography> 
                 </Grid>
                 <Grid item xs={12} md={12} sx={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                      <Typography variant="subtitle1"  sx={{ color: theme.colors.gray200}}>
-                        R$ 120,00
+                        R$ 0.00001973 ETH
                      </Typography> 
                      <Typography variant="subtitle1"  sx={{ color: theme.colors.green, marginRight: '12px'}}>
-                        6.94%
+                        2.94%
                      </Typography> 
                 </Grid>
  

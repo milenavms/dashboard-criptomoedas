@@ -26,6 +26,8 @@ interface Column {
   format?: (value: number) => string;
 }
 
+
+
 const columns: readonly Column[] = [
   { id: 'market_cap_rank', label: '#', minWidth: 20 },
   { id: 'image', label: '', minWidth: 20 },
@@ -73,18 +75,17 @@ export default function TableValues() {
   }, []);
 
   useEffect(() => {
-    const data:any= window.localStorage.getItem('FAVORITES_COINS')
-    const data2 = JSON.parse(data)
-    if( data2?.length > 0){
-      console.log('getItem se F5: ', data2)
-      setFavorites(data2) 
+    const data:string | null= window.localStorage.getItem('FAVORITES_COINS')
+    const parseData = data ? JSON.parse(data) : null
+    if( parseData?.length > 0){
+      console.log('getItem se F5: ', parseData)
+      setFavorites(parseData) 
     }
   }, [])
 
   useEffect(() => {
     if(favorites.length >= 0){
       window.localStorage.setItem('FAVORITES_COINS', JSON.stringify(favorites))
-      console.log('setItem se o favorites tiver alteração',favorites)
     }
   }, [favorites])
 
