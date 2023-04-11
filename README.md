@@ -27,7 +27,10 @@ página que irá conter somente as informações da moeda selecionada.
 
 https://api.coingecko.com/
 
-## Link 
+## Para visualizar a página, acesse o link abaixo: 
+
+Site: [link](https://dashboard-criptomoedas-hoh8-ly45x3czk-milenavms.vercel.app/) 
+
 
 
   
