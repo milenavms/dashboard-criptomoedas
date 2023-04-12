@@ -23,7 +23,7 @@ o browser/aba ser fechado.
 página que irá conter somente as informações da moeda selecionada.	   
 - [x] A busca deverá conter o conceito debounce	 
 
-## API Púlica
+## API Pública
 
 https://api.coingecko.com/
 
