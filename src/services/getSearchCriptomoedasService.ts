@@ -1,20 +1,5 @@
 import axios from 'axios'
-
-export interface Coin {
-    name: string
-    thumb: string
-    market_cap_rank: number
-    symbol: string
-}
-
-export interface Data {
-    coins: Coin[];
-}
-
-export interface SearchListInterface{
-    status: String;
-    data: Data;
-}
+import { SearchListInterface } from 'interface/SearchListInterface';
 
 export async function getSearchCriptomoedasService(name: string | null): Promise<any>{
     const endpoint = `https://api.coingecko.com/api/v3/search/?query=${name}`;
