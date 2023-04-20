@@ -7,10 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { IconButton } from "@mui/material";
-import {
-  CriptoTopListInterface,
-  getListTopCriptomoedasService,
-} from "services/getListTopCriptomoedasService";
+import { getListTopCriptomoedasService } from "services/getListTopCriptomoedasService";
 import styled from "@emotion/styled";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import iconPolygonLowMin from "assets/icons/icon-polygon-low-min.svg";
@@ -18,6 +15,7 @@ import iconPolygonHithMin from "assets/icons/icon-polygon-hith-min.svg";
 import { TableValuesCustom } from "./styles";
 import Star from "components/Star";
 import { FavoriteContext } from "context/FavoriteContext";
+import { CriptoTopListInterface } from "interface/CriptoListInterface";
 
 interface Column {
   id:

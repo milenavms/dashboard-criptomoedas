@@ -5,12 +5,10 @@ import Grid from "@mui/material/Grid";
 import IconDefault from "assets/icons/icon-default.svg";
 import IconFavoritar from "assets/icons/favoritar.svg";
 import { useTheme } from "styled-components";
-import {
-  DataListCriptoInterface,
-  getDataListCriptomoedaService,
-} from "services/getDataListCriptomoedaService";
+import { getDataListCriptomoedaService } from "services/getDataListCriptomoedaService";
 import { getDataListCriptomoedaPriceService } from "services/getDataListCriptomoedaPriceService";
 import styled from "styled-components";
+import { DataListCriptoInterface } from "interface/ListCoinInterface";
 
 const TextBackground = styled.div`
   height: 31px;

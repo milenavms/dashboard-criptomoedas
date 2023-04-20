@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
-import {
-  Coin,
-  getSearchCriptomoedasService,
-} from "services/getSearchCriptomoedasService";
+import { getSearchCriptomoedasService } from "services/getSearchCriptomoedasService";
 import useDebounce from "hooks/debounce/useDebounce";
 import { NavLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
+import { Coin } from "interface/SearchListInterface";
 
 export default function SearchButton() {
   const [getCoins, setGetCoin] = useState<Coin[]>([]);

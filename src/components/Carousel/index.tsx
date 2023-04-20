@@ -13,7 +13,7 @@ import iconPolygonHith from "assets/icons/icon-polygon-hith.svg";
 import { MainCarousel } from "./styles";
 import Star from "components/Star";
 import { FavoriteContext } from "context/FavoriteContext";
-import { CriptoTopListInterface } from "services/getListTopCriptomoedasService";
+import { CriptoTopListInterface } from "interface/CriptoListInterface";
 
 const theme = createTheme();
 theme.typography.h5 = {
