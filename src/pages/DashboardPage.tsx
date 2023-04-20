@@ -1,18 +1,16 @@
 import { useRouteError } from "react-router-dom";
-import Header from "../components/Header/Header";
-import Carousel from "../components/Carousel/Carousel";
-import TableValues from "../components/TableValues/TableValues";
+import Header from "components/Header";
+import Carousel from "components/Carousel";
+import TableValues from "components/TableValues";
 
-
-export default function DashboardPage(){
+export default function DashboardPage() {
   const error = useRouteError();
-   
-    return (
-      <>
-          <Header name="Preço das criptomoedas por valor de mercado"/>
-          <Carousel/>
-          <TableValues/>
-      </>
-    );
-};
 
+  return (
+    <>
+      <Header name="Preço das criptomoedas por valor de mercado" />
+      <Carousel />
+      <TableValues />
+    </>
+  );
+}

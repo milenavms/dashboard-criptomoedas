@@ -1,25 +1,26 @@
 import { useState } from "react";
 import { createContext } from "react";
-import { FavoriteContextProps } from "../interface/FavoriteContextProps";
-import { CriptoTopListInterface } from "../services/getListTopCriptomoedasService";
+import { FavoriteContextProps } from "interface/FavoriteContextProps";
+import { CriptoTopListInterface } from "services/getListTopCriptomoedasService";
 
 interface props {
-    children: JSX.Element | JSX.Element[]
+  children: JSX.Element | JSX.Element[];
 }
 
-const VALUE_INITIAL: CriptoTopListInterface[]= [];
+const VALUE_INITIAL: CriptoTopListInterface[] = [];
 
 export const FavoriteContext = createContext<FavoriteContextProps>({
-    favorites: VALUE_INITIAL,
-    setFavorites: () => console.warn('setFavorites initial'),
+  favorites: VALUE_INITIAL,
+  setFavorites: () => console.warn("setFavorites initial"),
 });
 
-export const FavoriteProvider = ({children}:props) => {
-    const [favorites, setFavorites] = useState<CriptoTopListInterface[]>(VALUE_INITIAL);
+export const FavoriteProvider = ({ children }: props) => {
+  const [favorites, setFavorites] =
+    useState<CriptoTopListInterface[]>(VALUE_INITIAL);
 
-    return(
-        <FavoriteContext.Provider value={{favorites, setFavorites}}>
-            {children}
-        </FavoriteContext.Provider>
-    )
-}
+  return (
+    <FavoriteContext.Provider value={{ favorites, setFavorites }}>
+      {children}
+    </FavoriteContext.Provider>
+  );
+};
