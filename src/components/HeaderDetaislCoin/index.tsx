@@ -56,21 +56,21 @@ export default function HeaderDetailsCoin() {
   const theme = useTheme();
   const [detailsCoin, setDetailsCoin] = useState<DataListCriptoInterface>();
   const [detailsCoinPrice, setDetailsCoinPrice] = useState<number>(0);
-  const { idmoeda } = useParams<string>();
+  const { idcoin } = useParams<string>();
   const [error, setError] = useState<string>();
 
   useEffect(() => {
     setError("");
 
-    if (!idmoeda) return;
+    if (!idcoin) return;
 
-    getDataListCriptomoedaService(idmoeda?.toLocaleLowerCase()).then(
+    getDataListCriptomoedaService(idcoin?.toLocaleLowerCase()).then(
       (response) => setDetailsCoin(response)
     );
-    getDataListCriptomoedaPriceService(idmoeda?.toLocaleLowerCase())
+    getDataListCriptomoedaPriceService(idcoin?.toLocaleLowerCase())
       .then((response) => setDetailsCoinPrice(response.prices[0][1]))
       .catch((error) => setError(error.response.status));
-  }, [idmoeda]);
+  }, [idcoin]);
 
   return (
     <>

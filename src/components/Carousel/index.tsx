@@ -1,10 +1,4 @@
-import {
-  useState,
-  useEffect,
-  useRef,
-  useContext,
-  MutableRefObject,
-} from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { motion } from "framer-motion";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";

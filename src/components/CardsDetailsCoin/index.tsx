@@ -33,16 +33,16 @@ const CardCustom = styled.div`
 
 const github = [
   {
-    nome: "GitHub Followers",
-    valor: 123,
+    name: "GitHub Followers",
+    value: 123,
   },
   {
-    nome: "GitHub Stars",
-    valor: 970,
+    name: "GitHub Stars",
+    value: 970,
   },
   {
-    nome: "GitHub Forks",
-    valor: 213,
+    name: "GitHub Forks",
+    value: 213,
   },
 ];
 
@@ -64,7 +64,7 @@ export default function CardsDetailsCoin() {
                     marginBottom: "4px",
                   }}
                 >
-                  {git.nome}
+                  {git.name}
                 </Typography>
                 <Typography
                   variant="h4"
@@ -75,7 +75,7 @@ export default function CardsDetailsCoin() {
                     marginBottom: "0px",
                   }}
                 >
-                  {git.valor}
+                  {git.value}
                 </Typography>
               </CardCustom>
             </ItemCard>

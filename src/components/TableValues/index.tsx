@@ -84,7 +84,6 @@ export default function TableValues() {
     const data: string | null = window.localStorage.getItem("FAVORITES_COINS");
     const parseData = data ? JSON.parse(data) : null;
     if (parseData?.length > 0) {
-      console.log("getItem se F5: ", parseData);
       setFavorites(parseData);
     }
   }, []);

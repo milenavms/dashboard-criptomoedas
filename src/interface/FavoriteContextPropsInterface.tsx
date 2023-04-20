@@ -1,6 +1,6 @@
 import { CriptoTopListInterface } from "./CriptoListInterface";
 
-export interface FavoriteContextProps {
+export interface FavoriteContextPropsInterface {
   favorites: CriptoTopListInterface[];
   setFavorites: React.Dispatch<React.SetStateAction<CriptoTopListInterface[]>>;
 }
